@@ -62,5 +62,7 @@ tasks {
         minimize()
         relocate("org.json", "com.uroria.fastconfig.json")
         relocate("it.unimi.dsi", "com.uroria.fastconfig")
+
+        archiveFileName.set("FastConfig-${project.version}")
     }
 }
