@@ -53,10 +53,6 @@ publishing {
 }
 
 tasks {
-    build {
-        dependsOn(shadowJar)
-    }
-
     shadowJar {
         minimize()
         relocate("org.json", "com.uroria.fastconfig.json")
