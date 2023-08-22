@@ -36,7 +36,7 @@ java {
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            artifact(tasks["shadowJar"])
+            from(components["java"])
         }
     }
 
