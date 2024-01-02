@@ -42,12 +42,12 @@ publishing {
 
     repositories {
         maven {
-            url = uri("${System.getenv("CI_API_V4_URL")}/projects/${System.getenv("CI_PROJECT_ID")}/packages/maven")
+            url = uri("${System.getenv("CI_API_V4_URL")}/projects/660/packages/maven")
             name = "GitLab"
             if (System.getenv("CI") == "true") {
                 credentials(HttpHeaderCredentials::class) {
-                    name = "Job-Token"
-                    value = System.getenv("CI_JOB_TOKEN")
+                    name = "Private-Token"
+                    value = System.getenv("U_PIPELINE_DEFAULT_TOKEN")
                 }
             }
             authentication {
